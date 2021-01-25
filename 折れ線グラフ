@@ -1,0 +1,13 @@
+# デフォルトのnileデータ（ts形式）をdataframeに変換
+nile_data_frame <- data.frame(
+    year = 1871:1970
+    Nile = as.numeric(Nile)
+)   
+
+library(ggplot2)
+ggplot(nile_data_frame, aes(x = year, y = Nile)) +
+    geom_line()
+
+#その２　autoplot関数を使う場合
+library(ggfortify)
+autoplot(Nile)
